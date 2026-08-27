@@ -1556,26 +1556,24 @@
             });
 
             // ========== LINKS DE COMPRA ==========
-            // >>> SUBSTITUA O LINK ABAIXO PELO SEU <<<
-            const checkoutUrl = 'https://pay.kiwify.com.br/FlEb205'; // COLOQUE SEU LINK DE COMPRA AQUI
+         // ========== LINKS DE COMPRA ==========
+const checkoutUrl = 'https://pay.kiwify.com.br/FlEb205';
 
-            const links = document.querySelectorAll('#ctaPrincipal, #ctaPreco, #ctaFinal, #floatingCta, .nav-cta');
+const links = document.querySelectorAll('#ctaPrincipal, #ctaPreco, #ctaFinal, #floatingCta, .nav-cta');
 
-            links.forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    if (checkoutUrl === 'https://pay.kiwify.com.br/FlEb205') {
-                        e.preventDefault();
-                        alert('⚠️ Configure seu link de compra no código!\n\n' +
-                            'Procure por "checkoutUrl" no JavaScript e substitua pelo seu link.');
-                    } else {
-                        console.log('🛒 Clique em comprar registrado!', {
-                            produto: 'O Segredo da Prosperidade segundo a Bíblia',
-                            preco: 'R$ 19,90',
-                            timestamp: new Date().toISOString()
-                        });
-                    }
-                });
-            });
+links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        // Redireciona diretamente para o link
+        window.location.href = checkoutUrl;
+        e.preventDefault();
+        
+        console.log('🛒 Clique em comprar registrado!', {
+            produto: 'O Segredo da Prosperidade segundo a Bíblia',
+            preco: 'R$ 19,90',
+            timestamp: new Date().toISOString()
+        });
+    });
+});
 
             console.log('📖 Página carregada com sucesso!');
             console.log('💡 Configure seu link de compra no JavaScript (checkoutUrl).');
