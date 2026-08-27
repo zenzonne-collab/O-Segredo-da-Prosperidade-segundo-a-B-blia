@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#8B5E3C">
-    <title>O Segredo da Prosperidade segundo a Bíblia</title>
+    <title>7 Livros Secretos da Prosperidade</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -91,6 +91,12 @@
             content: '✦';
             font-size: 10px;
             color: var(--gold);
+        }
+
+        .tag-secret {
+            background: rgba(201, 154, 59, 0.2);
+            border-color: var(--gold);
+            color: var(--gold-dark);
         }
 
         /* ========== HEADER ========== */
@@ -289,6 +295,12 @@
             background: #FF6B35;
             color: #fff;
             border-color: #FF6B35;
+        }
+
+        .product-card .badge.secret {
+            background: var(--dark);
+            color: var(--gold);
+            border-color: var(--gold);
         }
 
         .product-card .price-row {
@@ -1034,6 +1046,110 @@
         .fade-in:nth-child(3) {
             animation-delay: 0.3s;
         }
+
+        /* ========== ESTILOS DA SEÇÃO DE CONTEÚDO ========== */
+        .content-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 780px;
+            margin: 0 auto 24px;
+        }
+
+        .content-grid-3 .item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .content-grid-3 .item.principal {
+            border: 2px solid var(--gold);
+        }
+
+        .content-grid-3 .item img {
+            width: 100%;
+            display: block;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+
+        .content-grid-3 .item .label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .content-grid-3 .item {
+            position: relative;
+        }
+
+        .lista-livros {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .lista-livros .livro {
+            background: var(--white);
+            padding: 10px 14px;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lista-livros .livro .icone {
+            font-size: 18px;
+        }
+
+        .lista-livros .livro .nome {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .destaque-combo {
+            text-align: center;
+            margin-top: 28px;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: var(--radius);
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .destaque-combo p {
+            color: #fff;
+            font-weight: 700;
+            font-size: 17px;
+            margin: 0;
+        }
+
+        .destaque-combo .sub {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 12px;
+            margin: 3px 0 0;
+            font-weight: 400;
+        }
+
+        @media (max-width: 640px) {
+            .content-grid-3 {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1054,14 +1170,15 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <div class="tag">Baseado na Palavra de Deus</div>
+                    <div class="tag tag-secret">🔮 Livros Secretos</div>
                     <h1>
-                        <span class="highlight">O Segredo</span> da Prosperidade<br>
-                        <em>segundo a Bíblia</em>
+                        <span class="highlight">7 Livros Secretos</span> da<br>
+                        <em>Prosperidade</em>
                     </h1>
                     <p class="hero-sub">
-                        O que as Escrituras realmente ensinam sobre <strong>dinheiro, mordomia e prosperidade</strong> — 
-                        muito além do que você já ouviu. Um <strong>guia prático</strong> com princípios eternos que vão transformar sua vida.
+                        Descubra os <strong>ensinamentos ocultos</strong> que poucos conhecem — 
+                        meditações poderosas que atraem prosperidade, dinheiro e abundância 
+                        para sua vida. <strong>+ 1 bônus exclusivo</strong>.
                     </p>
                     <div class="hero-meta">
                         <span class="hero-meta-item">
@@ -1070,11 +1187,11 @@
                         </span>
                         <span class="hero-meta-item">
                             <span class="divider"></span>
-                            <span>📖 200+ páginas</span>
+                            <span>📖 7 livros</span>
                         </span>
                         <span class="hero-meta-item">
                             <span class="divider"></span>
-                            <span>🔊 Áudio completo</span>
+                            <span>🧘 Meditações</span>
                         </span>
                     </div>
                 </div>
@@ -1086,15 +1203,15 @@
                     <div class="cover-container">
                         <img src="capa.jpg" alt="Capa do Guia">
                         <div class="cover-overlay">
-                            <h3>O Segredo da Prosperidade<br>segundo a Bíblia</h3>
-                            <p>Guia prático com princípios divinos</p>
+                            <h3>7 Livros Secretos<br>da Prosperidade</h3>
+                            <p>Meditações que atraem abundância</p>
                         </div>
                     </div>
 
                     <div class="badge-row">
                         <span class="badge hot">🔥 Mais Vendido</span>
-                        <span class="badge">📖 PDF + Áudio</span>
-                        <span class="badge">🎁 7 Livros</span>
+                        <span class="badge secret">🔮 7 Livros Secretos</span>
+                        <span class="badge">🎁 + 1 Bônus</span>
                     </div>
 
                     <div class="price-row">
@@ -1103,12 +1220,12 @@
                         <span class="price-tag">-97%</span>
                     </div>
                     <p class="price-info">
-                        <strong>Economize R$ 659,10</strong> · 7 livros · Acesso imediato
+                        <strong>Economize R$ 659,10</strong> · 7 livros + 1 bônus · Acesso imediato
                     </p>
 
                     <a href="#" class="btn-primary" id="ctaPrincipal">
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        Garantir meu combo agora
+                        Quero os 7 livros secretos
                     </a>
 
                     <div class="secure-badges">
@@ -1134,64 +1251,78 @@
     <section class="section section-alt">
         <div class="container">
             <div class="section-head">
-                <div class="tag">Combo Completo</div>
-                <h2>Você vai receber <em>7 livros</em> em 1</h2>
-                <p>O guia principal + 6 bônus exclusivos sobre prosperidade</p>
+                <div class="tag tag-secret">🔮 Conteúdo Secreto</div>
+                <h2>Você vai receber <em>7 livros secretos</em></h2>
+                <p>Ensinamentos de meditação que atraem prosperidade, dinheiro e abundância — + 1 bônus exclusivo</p>
             </div>
 
-            <!-- IMAGEM DOS 7 LIVROS -->
-            <div style="max-width:600px; margin:0 auto 24px; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);">
-                <img src="bonus-livros.png" alt="7 Livros sobre Prosperidade" style="width:100%; display:block;">
+            <!-- 3 IMAGENS LADO A LADO -->
+            <div class="content-grid-3">
+
+                <!-- Imagem 1: bonus-livros.png (principal) -->
+                <div class="item principal">
+                    <img src="bonus-livros.png" alt="7 Livros Secretos da Prosperidade">
+                    <span style="position:absolute; top:10px; left:10px; background:var(--gold); color:#fff; font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; padding:4px 12px; border-radius:20px;">📦 7 Livros</span>
+                </div>
+
+                <!-- Imagem 2: conteudo2.jpg -->
+                <div class="item">
+                    <img src="conteudo2.jpg" alt="Conteúdo 2">
+                    <span style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:#fff; font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; padding:4px 12px; border-radius:20px;">🧘 Meditações</span>
+                </div>
+
+                <!-- Imagem 3: conteudo3.jpg -->
+                <div class="item">
+                    <img src="conteudo3.jpg" alt="Conteúdo 3">
+                    <span style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:#fff; font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; padding:4px 12px; border-radius:20px;">✨ Prosperidade</span>
+                </div>
+
             </div>
 
             <!-- LISTA DOS 7 LIVROS -->
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:12px; max-width:700px; margin:0 auto;">
+            <div class="lista-livros">
 
-                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
-                    <span style="font-size:20px;">📖</span>
-                    <span style="font-size:14px; font-weight:600; color:var(--dark);">O Segredo da Prosperidade</span>
+                <div class="livro">
+                    <span class="icone">📖</span>
+                    <span class="nome">O Segredo da Prosperidade</span>
                 </div>
 
-                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
-                    <span style="font-size:20px;">📚</span>
-                    <span style="font-size:14px; font-weight:600; color:var(--dark);">31 Razões</span>
+                <div class="livro">
+                    <span class="icone">📚</span>
+                    <span class="nome">31 Razões</span>
                 </div>
 
-                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
-                    <span style="font-size:20px;">🔑</span>
-                    <span style="font-size:14px; font-weight:600; color:var(--dark);">Chaves para a Economia do Céu</span>
+                <div class="livro">
+                    <span class="icone">🔑</span>
+                    <span class="nome">Chaves para a Economia do Céu</span>
                 </div>
 
-                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
-                    <span style="font-size:20px;">🙏</span>
-                    <span style="font-size:14px; font-weight:600; color:var(--dark);">Orações que Ativam Bênçãos</span>
+                <div class="livro">
+                    <span class="icone">🙏</span>
+                    <span class="nome">Orações que Ativam Bênçãos</span>
                 </div>
 
-                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
-                    <span style="font-size:20px;">📖</span>
-                    <span style="font-size:14px; font-weight:600; color:var(--dark);">Prosperidade Bíblica</span>
+                <div class="livro">
+                    <span class="icone">📖</span>
+                    <span class="nome">Prosperidade Bíblica</span>
                 </div>
 
-                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
-                    <span style="font-size:20px;">🧠</span>
-                    <span style="font-size:14px; font-weight:600; color:var(--dark);">Emoções Financeiras</span>
+                <div class="livro">
+                    <span class="icone">🧠</span>
+                    <span class="nome">Emoções Financeiras</span>
                 </div>
 
-                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
-                    <span style="font-size:20px;">📅</span>
-                    <span style="font-size:14px; font-weight:600; color:var(--dark);">Devocional 21 Dias</span>
+                <div class="livro">
+                    <span class="icone">📅</span>
+                    <span class="nome">Devocional 21 Dias</span>
                 </div>
 
             </div>
 
             <!-- DESTAQUE DO COMBO -->
-            <div style="text-align:center; margin-top:28px; padding:16px 20px; background:linear-gradient(135deg, var(--gold), var(--gold-dark)); border-radius:var(--radius); max-width:450px; margin-left:auto; margin-right:auto;">
-                <p style="color:#fff; font-weight:700; font-size:18px; margin:0;">
-                    📦 7 livros por apenas R$ 19,90
-                </p>
-                <p style="color:rgba(255,255,255,0.8); font-size:13px; margin:4px 0 0;">
-                    Valor total: R$ 679,00 → Você economiza R$ 659,10
-                </p>
+            <div class="destaque-combo">
+                <p>📦 7 livros secretos + 1 bônus por apenas R$ 19,90</p>
+                <p class="sub">Valor total: R$ 679,00 → Você economiza R$ 659,10</p>
             </div>
         </div>
     </section>
@@ -1202,7 +1333,7 @@
             <div class="section-head">
                 <div class="tag">Depoimentos Reais</div>
                 <h2>O que <em>pessoas como você</em> estão dizendo</h2>
-                <p>Pessoas que aplicaram os princípios bíblicos e transformaram sua vida financeira</p>
+                <p>Pessoas que aplicaram os ensinamentos secretos e transformaram sua vida</p>
             </div>
 
             <div class="testimonials-grid">
@@ -1211,17 +1342,16 @@
                 <div class="testimonial-card fade-in">
                     <div class="stars">★★★★★</div>
                     <p class="text">
-                        <em>"Nunca imaginei que a Bíblia tivesse tantos ensinamentos práticos sobre dinheiro. 
-                        Em 3 meses aplicando o que aprendi, minha renda aumentou 40%."</em>
+                        <em>"Nunca imaginei que a meditação poderia atrair prosperidade. 
+                        Em 3 meses aplicando os ensinamentos, minha renda aumentou 40%."</em>
                     </p>
                     <div class="author">
                         <div class="avatar">M</div>
                         <div class="info">
-                            <div class="name">Laura Gomes.</div>
+                            <div class="name">Mariana S.</div>
                             <div class="city">São Paulo, SP</div>
                         </div>
                     </div>
-                    <!-- PRINT DO DEPOIMENTO -->
                     <img src="depoimento1.png" alt="Depoimento da Mariana" class="print-img">
                 </div>
 
@@ -1229,17 +1359,16 @@
                 <div class="testimonial-card fade-in">
                     <div class="stars">★★★★★</div>
                     <p class="text">
-                        <em>"Eu vivia endividado e sem esperança. Esse guia me mostrou que Deus quer 
-                        prosperidade para mim. Hoje tenho reserva financeira e paz de espírito."</em>
+                        <em>"Eu vivia endividado e sem esperança. Esses livros secretos me mostraram 
+                        o caminho da prosperidade. Hoje tenho paz e abundância."</em>
                     </p>
                     <div class="author">
                         <div class="avatar">R</div>
                         <div class="info">
-                            <div class="name">Patricia O</div>
+                            <div class="name">Rafael L.</div>
                             <div class="city">Rio de Janeiro, RJ</div>
                         </div>
                     </div>
-                    <!-- PRINT DO DEPOIMENTO -->
                     <img src="depoimento2.png" alt="Depoimento do Rafael" class="print-img">
                 </div>
 
@@ -1247,17 +1376,16 @@
                 <div class="testimonial-card fade-in">
                     <div class="stars">★★★★★</div>
                     <p class="text">
-                        <em>"Finalmente entendi o verdadeiro significado de ser próspero segundo Deus. 
-                        Não é só dinheiro, é sabedoria, paz e abundância em todas as áreas."</em>
+                        <em>"Finalmente entendi o verdadeiro significado da prosperidade. 
+                        As meditações mudaram minha mente e minha vida financeira."</em>
                     </p>
                     <div class="author">
                         <div class="avatar">P</div>
                         <div class="info">
-                            <div class="name">Maria Eduarda.</div>
+                            <div class="name">Patrícia O.</div>
                             <div class="city">Belo Horizonte, MG</div>
                         </div>
                     </div>
-                    <!-- PRINT DO DEPOIMENTO -->
                     <img src="depoimento3.png" alt="Depoimento da Patrícia" class="print-img">
                 </div>
 
@@ -1290,9 +1418,9 @@
     <section class="pricing-section" id="preco">
         <div class="container">
             <div class="section-head">
-                <div class="tag" style="background: rgba(201, 154, 59, 0.15); color: var(--gold-light); border-color: rgba(201, 154, 59, 0.2);">Oferta Especial</div>
-                <h2>Comece sua jornada de <em>prosperidade</em> agora</h2>
-                <p>Acesso imediato aos 7 livros + bônus — tudo por um preço acessível</p>
+                <div class="tag" style="background: rgba(201, 154, 59, 0.15); color: var(--gold-light); border-color: rgba(201, 154, 59, 0.2);">Oferta Secreta</div>
+                <h2>Desbloqueie sua <em>prosperidade</em> agora</h2>
+                <p>Acesso imediato aos 7 livros secretos + meditações + 1 bônus</p>
             </div>
 
             <div class="pricing-box">
@@ -1307,7 +1435,7 @@
 
                 <a href="#" class="btn-primary" id="ctaPreco">
                     <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    Quero meu combo agora
+                    Quero os 7 livros secretos
                 </a>
 
                 <div class="guarantee">
@@ -1324,37 +1452,37 @@
             <div class="section-head">
                 <div class="tag">Perguntas Frequentes</div>
                 <h2>Ainda com <em>dúvidas?</em></h2>
-                <p>Respondemos as perguntas mais comuns sobre o combo</p>
+                <p>Respondemos as perguntas mais comuns sobre os livros secretos</p>
             </div>
 
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span>Como vou receber os livros?</span>
+                        <span>O que são os 7 livros secretos?</span>
                         <span class="plus">+</span>
                     </div>
                     <div class="faq-a">
-                        <p>Imediatamente após a confirmação do pagamento, você receberá um link para baixar todos os 7 livros em PDF. Tudo disponível em até 5 minutos.</p>
+                        <p>São 7 livros completos com ensinamentos de meditação e princípios espirituais que atraem prosperidade, dinheiro e abundância para sua vida.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span>Preciso ter conhecimento bíblico para entender?</span>
+                        <span>Preciso ter conhecimento religioso para entender?</span>
                         <span class="plus">+</span>
                     </div>
                     <div class="faq-a">
-                        <p>Não! Os livros foram escritos com linguagem simples e acessível. Você não precisa ser especialista em teologia para aplicar os princípios.</p>
+                        <p>Não! Os livros foram escritos com linguagem simples e acessível. Os ensinamentos são práticos e podem ser aplicados por qualquer pessoa.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span>Posso ler no celular ou tablet?</span>
+                        <span>Como funcionam as meditações?</span>
                         <span class="plus">+</span>
                     </div>
                     <div class="faq-a">
-                        <p>Sim! Todos os PDFs são otimizados para leitura em qualquer dispositivo — celular, tablet, computador ou até impresso.</p>
+                        <p>As meditações são guiadas com princípios espirituais e bíblicos que ajudam a reprogramar sua mente para atrair prosperidade e abundância.</p>
                     </div>
                 </div>
 
@@ -1370,11 +1498,11 @@
 
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span>São realmente 7 livros completos?</span>
+                        <span>Qual é o bônus adicional?</span>
                         <span class="plus">+</span>
                     </div>
                     <div class="faq-a">
-                        <p>Sim! Você recebe 7 livros completos em PDF, com centenas de páginas sobre prosperidade, finanças e princípios bíblicos.</p>
+                        <p>Além dos 7 livros, você recebe um bônus exclusivo com ensinamentos extras sobre prosperidade e abundância.</p>
                     </div>
                 </div>
             </div>
@@ -1385,13 +1513,13 @@
     <section class="final-cta">
         <div class="container">
             <h2>
-                Pare de viver na <em>escassez</em>.<br>
-                Descubra a <em>prosperidade</em> que Deus tem para você.
+                Descubra os <em>7 livros secretos</em> que<br>
+                vão transformar sua <em>prosperidade</em>
             </h2>
-            <p>Comece agora mesmo. Acesso imediato aos 7 livros + bônus.</p>
+            <p>Comece agora mesmo. Acesso imediato aos 7 livros + meditações + 1 bônus.</p>
             <a href="#" class="btn-primary" id="ctaFinal">
                 <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                Garantir meu combo — R$ 19,90
+                Quero os 7 livros secretos — R$ 19,90
             </a>
         </div>
     </section>
@@ -1401,7 +1529,7 @@
         <div class="container">
             <p>
                 Aviso importante: Este é um material educativo e de entretenimento. Os resultados podem variar de pessoa para pessoa. 
-                A Bíblia ensina princípios de sabedoria, mas cada um deve buscar orientação espiritual pessoal.
+                Os ensinamentos são baseados em princípios espirituais e bíblicos.
             </p>
             <p class="fine">© Prosperidade com Fé — Todos os direitos reservados</p>
         </div>
@@ -1411,8 +1539,8 @@
     <a href="#" class="floating-cta" id="floatingCta">
         <span class="price">R$19,90</span>
         <span class="text">
-            Garantir combo
-            <small>7 livros</small>
+            7 livros secretos
+            <small>+ meditações</small>
         </span>
         <span class="arrow">→</span>
     </a>
@@ -1473,7 +1601,7 @@
                     e.preventDefault();
 
                     console.log('🛒 Clique em comprar registrado!', {
-                        produto: 'O Segredo da Prosperidade segundo a Bíblia',
+                        produto: '7 Livros Secretos da Prosperidade',
                         preco: 'R$ 19,90',
                         timestamp: new Date().toISOString()
                     });
@@ -1481,7 +1609,6 @@
             });
 
             console.log('📖 Página carregada com sucesso!');
-            console.log('🖼️ Substitua os placeholders de imagem pelas suas capas e prints.');
 
         })();
     </script>
