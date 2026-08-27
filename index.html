@@ -265,53 +265,6 @@
             box-shadow: var(--shadow-hover);
         }
 
-        /* ========== IMAGEM - VOCÊ VAI SUBSTITUIR ========== */
-     <!-- CAPA DO GUIA COM IMAGEM -->
-<div style="position:relative; max-width:280px; margin:0 auto 20px; border-radius:8px; overflow:hidden; box-shadow:0 12px 40px rgba(26,20,16,0.2); aspect-ratio:3/4;">
-  <img src="capa.jpg" alt="Teste" style="width:200px; border:3px solid red; display:block; margin:0 auto;">
-    <div style="position:absolute; bottom:0; left:0; right:0; padding:20px 16px 16px; background:linear-gradient(transparent, rgba(0,0,0,0.75)); color:#fff; text-align:center;">
-        <h3 style="font-family:'Playfair Display',serif; font-size:17px; font-weight:700; margin:0; line-height:1.2;">O Segredo da Prosperidade<br>segundo a Bíblia</h3>
-        <p style="font-family:'Inter',sans-serif; font-size:11px; opacity:0.85; margin-top:3px;">Guia prático com princípios divinos</p>
-    </div>
-</div>
-
-        /* PLACEHOLDER PARA VOCÊ SUBSTITUIR PELA SUA IMAGEM */
-        .product-card .cover-placeholder {
-            width: 100%;
-            max-width: 280px;
-            margin: 0 auto 20px;
-            aspect-ratio: 3/4;
-            background: linear-gradient(145deg, var(--gold-dark), var(--gold));
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-            padding: 30px;
-            box-shadow: 0 12px 40px rgba(201, 154, 59, 0.3);
-        }
-
-        .product-card .cover-placeholder .icon {
-            font-size: 48px;
-            margin-bottom: 12px;
-        }
-
-        .product-card .cover-placeholder h3 {
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .product-card .cover-placeholder p {
-            font-size: 12px;
-            opacity: 0.8;
-            margin-top: 6px;
-            font-family: var(--font-sans);
-            font-weight: 400;
-        }
-
         .product-card .badge-row {
             display: flex;
             align-items: center;
@@ -448,6 +401,50 @@
             fill: none;
         }
 
+        /* ========== CAPA DO GUIA COM IMAGEM ========== */
+        .cover-container {
+            position: relative;
+            max-width: 280px;
+            margin: 0 auto 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(26, 20, 16, 0.2);
+            aspect-ratio: 3/4;
+        }
+
+        .cover-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .cover-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 16px 16px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+            color: #fff;
+            text-align: center;
+        }
+
+        .cover-overlay h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .cover-overlay p {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            opacity: 0.85;
+            margin-top: 3px;
+        }
+
         /* ========== DEPOIMENTOS ========== */
         .section {
             padding: 80px 0;
@@ -559,7 +556,6 @@
             color: var(--text-soft);
         }
 
-        /* ========== ÁREA PARA SEUS PRINTS ========== */
         .print-placeholder {
             width: 100%;
             background: var(--cream-dark);
@@ -1165,15 +1161,13 @@
                 <!-- ========== CARD DO PRODUTO ========== -->
                 <div class="product-card" id="preco">
                     
-                    <!-- >>> COLOQUE SUA IMAGEM AQUI <<< -->
-                    <!-- Opção 1: Use a tag <img> com o caminho da sua imagem -->
-                    <!-- <img src="sua-imagem-capa.png" alt="Capa do Guia" class="book-cover"> -->
-                    
-                    <!-- Opção 2: Placeholder (remova quando colocar sua imagem) -->
-                    <div class="cover-placeholder">
-                        <div class="icon">✝</div>
-                        <h3>O Segredo da Prosperidade<br>segundo a Bíblia</h3>
-                        <p>Guia prático com princípios divinos</p>
+                    <!-- ===== CAPA DO GUIA COM IMAGEM ===== -->
+                    <div class="cover-container">
+                        <img src="capa.jpg" alt="Capa do Guia">
+                        <div class="cover-overlay">
+                            <h3>O Segredo da Prosperidade<br>segundo a Bíblia</h3>
+                            <p>Guia prático com princípios divinos</p>
+                        </div>
                     </div>
 
                     <div class="badge-row">
@@ -1239,7 +1233,6 @@
                             <div class="city">São Paulo, SP</div>
                         </div>
                     </div>
-                    <!-- >>> COLOQUE SEU PRINT AQUI <<< -->
                     <div class="print-placeholder">
                         📸 Coloque aqui o print do depoimento
                     </div>
@@ -1554,24 +1547,29 @@
             });
 
             // ========== LINKS DE COMPRA ==========
-         // ========== LINKS DE COMPRA ==========
-const checkoutUrl = 'https://pay.kiwify.com.br/FlEb205';
+            // >>> SUBSTITUA O LINK ABAIXO PELO SEU <<<
+            const checkoutUrl = 'https://pay.kiwify.com.br/FlEb205';
 
-const links = document.querySelectorAll('#ctaPrincipal, #ctaPreco, #ctaFinal, #floatingCta, .nav-cta');
+            const links = document.querySelectorAll('#ctaPrincipal, #ctaPreco, #ctaFinal, #floatingCta, .nav-cta');
 
-links.forEach(function(link) {
-    link.addEventListener('click', function(e) {
-        // Redireciona diretamente para o link
-        window.location.href = checkoutUrl;
-        e.preventDefault();
-        
-        console.log('🛒 Clique em comprar registrado!', {
-            produto: 'O Segredo da Prosperidade segundo a Bíblia',
-            preco: 'R$ 19,90',
-            timestamp: new Date().toISOString()
-        });
-    });
-});
+            links.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    if (checkoutUrl === '#') {
+                        e.preventDefault();
+                        alert('⚠️ Configure seu link de compra no código!\n\n' +
+                            'Procure por "checkoutUrl" no JavaScript e substitua pelo seu link.');
+                    } else {
+                        window.location.href = checkoutUrl;
+                        e.preventDefault();
+                        
+                        console.log('🛒 Clique em comprar registrado!', {
+                            produto: 'O Segredo da Prosperidade segundo a Bíblia',
+                            preco: 'R$ 19,90',
+                            timestamp: new Date().toISOString()
+                        });
+                    }
+                });
+            });
 
             console.log('📖 Página carregada com sucesso!');
             console.log('💡 Configure seu link de compra no JavaScript (checkoutUrl).');
