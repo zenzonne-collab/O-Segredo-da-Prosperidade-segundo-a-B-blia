@@ -556,77 +556,14 @@
             color: var(--text-soft);
         }
 
-        .print-placeholder {
+        .testimonial-card .print-img {
             width: 100%;
-            background: var(--cream-dark);
             border-radius: 8px;
-            padding: 16px;
             margin-top: 8px;
-            text-align: center;
-            font-size: 12px;
-            color: var(--text-soft);
-            border: 2px dashed rgba(201, 154, 59, 0.2);
-            min-height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: 1px solid rgba(201, 154, 59, 0.1);
         }
 
-        /* ========== O QUE VOCÊ VAI APRENDER ========== */
-        .learn-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .learn-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 28px 24px;
-            border: 1px solid rgba(201, 154, 59, 0.08);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(26, 20, 16, 0.04);
-        }
-
-        .learn-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow);
-            border-color: rgba(201, 154, 59, 0.2);
-        }
-
-        .learn-card .icon {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-
-        .learn-card h3 {
-            font-size: 18px;
-            color: var(--dark);
-            margin-bottom: 8px;
-        }
-
-        .learn-card p {
-            font-size: 14px;
-            color: var(--text-soft);
-            line-height: 1.7;
-        }
-
-        .learn-card .verse {
-            margin-top: 12px;
-            padding: 12px 16px;
-            background: rgba(201, 154, 59, 0.06);
-            border-radius: 8px;
-            font-style: italic;
-            font-size: 13px;
-            color: var(--gold-dark);
-            border-left: 3px solid var(--gold);
-        }
-
-        .learn-card .verse::before {
-            content: '📖 ';
-        }
-
-        /* ========== BÔNUS ========== */
+        /* ========== O QUE VOCÊ VAI RECEBER ========== */
         .bonus-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -978,14 +915,6 @@
             .testimonials-grid {
                 grid-template-columns: 1fr 1fr;
             }
-
-            .learn-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .bonus-grid {
-                grid-template-columns: 1fr 1fr;
-            }
         }
 
         @media (max-width: 640px) {
@@ -1010,14 +939,6 @@
             }
 
             .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .learn-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .bonus-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1160,7 +1081,7 @@
 
                 <!-- ========== CARD DO PRODUTO ========== -->
                 <div class="product-card" id="preco">
-                    
+
                     <!-- ===== CAPA DO GUIA COM IMAGEM ===== -->
                     <div class="cover-container">
                         <img src="capa.jpg" alt="Capa do Guia">
@@ -1173,21 +1094,21 @@
                     <div class="badge-row">
                         <span class="badge hot">🔥 Mais Vendido</span>
                         <span class="badge">📖 PDF + Áudio</span>
-                        <span class="badge">🎁 3 Bônus</span>
+                        <span class="badge">🎁 7 Livros</span>
                     </div>
 
                     <div class="price-row">
-                        <span class="price-old">De R$ 97,00</span>
+                        <span class="price-old">De R$ 679,00</span>
                         <span class="price-new"><sup>R$</sup>19,90</span>
-                        <span class="price-tag">-79%</span>
+                        <span class="price-tag">-97%</span>
                     </div>
                     <p class="price-info">
-                        <strong>Economize R$ 77,10</strong> · Acesso imediato · Vitalício
+                        <strong>Economize R$ 659,10</strong> · 7 livros · Acesso imediato
                     </p>
 
                     <a href="#" class="btn-primary" id="ctaPrincipal">
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        Garantir meu Guia agora
+                        Garantir meu combo agora
                     </a>
 
                     <div class="secure-badges">
@@ -1209,8 +1130,74 @@
         </div>
     </section>
 
-    <!-- ========== DEPOIMENTOS ========== -->
+    <!-- ========== O QUE VOCÊ VAI RECEBER ========== -->
     <section class="section section-alt">
+        <div class="container">
+            <div class="section-head">
+                <div class="tag">Combo Completo</div>
+                <h2>Você vai receber <em>7 livros</em> em 1</h2>
+                <p>O guia principal + 6 bônus exclusivos sobre prosperidade</p>
+            </div>
+
+            <!-- IMAGEM DOS 7 LIVROS -->
+            <div style="max-width:600px; margin:0 auto 24px; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);">
+                <img src="bonus-livros.png" alt="7 Livros sobre Prosperidade" style="width:100%; display:block;">
+            </div>
+
+            <!-- LISTA DOS 7 LIVROS -->
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:12px; max-width:700px; margin:0 auto;">
+
+                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:20px;">📖</span>
+                    <span style="font-size:14px; font-weight:600; color:var(--dark);">O Segredo da Prosperidade</span>
+                </div>
+
+                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:20px;">📚</span>
+                    <span style="font-size:14px; font-weight:600; color:var(--dark);">31 Razões</span>
+                </div>
+
+                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:20px;">🔑</span>
+                    <span style="font-size:14px; font-weight:600; color:var(--dark);">Chaves para a Economia do Céu</span>
+                </div>
+
+                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:20px;">🙏</span>
+                    <span style="font-size:14px; font-weight:600; color:var(--dark);">Orações que Ativam Bênçãos</span>
+                </div>
+
+                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:20px;">📖</span>
+                    <span style="font-size:14px; font-weight:600; color:var(--dark);">Prosperidade Bíblica</span>
+                </div>
+
+                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:20px;">🧠</span>
+                    <span style="font-size:14px; font-weight:600; color:var(--dark);">Emoções Financeiras</span>
+                </div>
+
+                <div style="background:var(--white); padding:12px 16px; border-radius:8px; border-left:4px solid var(--gold); display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:20px;">📅</span>
+                    <span style="font-size:14px; font-weight:600; color:var(--dark);">Devocional 21 Dias</span>
+                </div>
+
+            </div>
+
+            <!-- DESTAQUE DO COMBO -->
+            <div style="text-align:center; margin-top:28px; padding:16px 20px; background:linear-gradient(135deg, var(--gold), var(--gold-dark)); border-radius:var(--radius); max-width:450px; margin-left:auto; margin-right:auto;">
+                <p style="color:#fff; font-weight:700; font-size:18px; margin:0;">
+                    📦 7 livros por apenas R$ 19,90
+                </p>
+                <p style="color:rgba(255,255,255,0.8); font-size:13px; margin:4px 0 0;">
+                    Valor total: R$ 679,00 → Você economiza R$ 659,10
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DEPOIMENTOS ========== -->
+    <section class="section">
         <div class="container">
             <div class="section-head">
                 <div class="tag">Depoimentos Reais</div>
@@ -1219,6 +1206,7 @@
             </div>
 
             <div class="testimonials-grid">
+
                 <!-- Depoimento 1 -->
                 <div class="testimonial-card fade-in">
                     <div class="stars">★★★★★</div>
@@ -1233,9 +1221,8 @@
                             <div class="city">São Paulo, SP</div>
                         </div>
                     </div>
-                    <div class="print-placeholder">
-                        📸 Coloque aqui o print do depoimento
-                    </div>
+                    <!-- PRINT DO DEPOIMENTO -->
+                    <img src="depoimento1.png" alt="Depoimento da Mariana" class="print-img">
                 </div>
 
                 <!-- Depoimento 2 -->
@@ -1252,9 +1239,8 @@
                             <div class="city">Rio de Janeiro, RJ</div>
                         </div>
                     </div>
-                    <div class="print-placeholder">
-                        📸 Coloque aqui o print do depoimento
-                    </div>
+                    <!-- PRINT DO DEPOIMENTO -->
+                    <img src="depoimento2.png" alt="Depoimento do Rafael" class="print-img">
                 </div>
 
                 <!-- Depoimento 3 -->
@@ -1271,100 +1257,32 @@
                             <div class="city">Belo Horizonte, MG</div>
                         </div>
                     </div>
-                    <div class="print-placeholder">
-                        📸 Coloque aqui o print do depoimento
-                    </div>
+                    <!-- PRINT DO DEPOIMENTO -->
+                    <img src="depoimento3.png" alt="Depoimento da Patrícia" class="print-img">
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ========== O QUE VOCÊ VAI APRENDER ========== -->
-    <section class="section">
-        <div class="container">
-            <div class="section-head">
-                <div class="tag">Conteúdo do Guia</div>
-                <h2>O que a Bíblia realmente ensina sobre <em>prosperidade</em></h2>
-                <p>Princípios práticos e fundamentos bíblicos que vão transformar sua relação com o dinheiro</p>
             </div>
 
-            <div class="learn-grid">
-                <div class="learn-card fade-in">
-                    <div class="icon">💎</div>
-                    <h3>O Verdadeiro Dono da Riqueza</h3>
-                    <p>Entenda o princípio bíblico de que tudo pertence a Deus e como isso transforma sua relação com o dinheiro.</p>
-                    <div class="verse">"Do Senhor é a terra e a sua plenitude" — Salmo 24:1</div>
-                </div>
-
-                <div class="learn-card fade-in">
-                    <div class="icon">🌾</div>
-                    <h3>O Princípio da Multiplicação</h3>
-                    <p>Descubra como a lei da semeadura e colheita funciona na prática e como aplicá-la para multiplicar seus recursos.</p>
-                    <div class="verse">"Aquele que semeia pouco, pouco também ceifará" — 2 Coríntios 9:6</div>
-                </div>
-
-                <div class="learn-card fade-in">
-                    <div class="icon">👑</div>
-                    <h3>A Sabedoria de Salomão</h3>
-                    <p>Os segredos do homem mais rico da história sobre administração, investimentos e prosperidade duradoura.</p>
-                    <div class="verse">"A sabedoria é a principal coisa; adquire, pois, a sabedoria" — Provérbios 4:7</div>
-                </div>
-
-                <div class="learn-card fade-in">
-                    <div class="icon">⛵</div>
-                    <h3>A Jornada de José</h3>
-                    <p>Como José transformou a crise do Egito em prosperidade e o que isso ensina sobre planejamento e estratégia.</p>
-                    <div class="verse">"José ajuntou todo o dinheiro que havia no Egito" — Gênesis 47:14</div>
-                </div>
-
-                <div class="learn-card fade-in">
-                    <div class="icon">🕊️</div>
-                    <h3>O Cuidado com a Mordomia</h3>
-                    <p>Entenda que você é mordomo, não dono — e como essa mudança de perspectiva gera liberdade financeira.</p>
-                    <div class="verse">"Sede fiéis na administração dos bens" — Lucas 16:10</div>
-                </div>
-
-                <div class="learn-card fade-in">
-                    <div class="icon">🔥</div>
-                    <h3>A Prosperidade que Vai Além do Dinheiro</h3>
-                    <p>Descubra a verdadeira prosperidade bíblica: saúde, relacionamentos, paz e propósito — a vida em abundância.</p>
-                    <div class="verse">"Eu vim para que tenham vida, e a tenham em abundância" — João 10:10</div>
+            <!-- SELO DE CONFIANÇA -->
+            <div style="text-align:center; margin-top:32px; padding:16px 20px; background:var(--white); border-radius:var(--radius); border:1px solid rgba(201,154,59,0.1); max-width:500px; margin-left:auto; margin-right:auto;">
+                <div style="display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; font-size:13px; color:var(--text-soft);">
+                    <span style="display:flex; align-items:center; gap:6px;">
+                        <span style="color:var(--gold); font-size:16px;">★</span>
+                        <span><strong style="color:var(--dark);">4,9/5</strong> · 1.200+ alunos</span>
+                    </span>
+                    <span style="width:1px; height:20px; background:rgba(201,154,59,0.2);"></span>
+                    <span style="display:flex; align-items:center; gap:6px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span><strong style="color:var(--dark);">99%</strong> de aprovação</span>
+                    </span>
+                    <span style="width:1px; height:20px; background:rgba(201,154,59,0.2);"></span>
+                    <span style="display:flex; align-items:center; gap:6px;">
+                        <span>✅</span>
+                        <span><strong style="color:var(--dark);">7 dias</strong> de garantia</span>
+                    </span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ========== BÔNUS ========== -->
-    <section class="section section-alt">
-        <div class="container">
-            <div class="section-head">
-                <div class="tag">Bônus Exclusivos</div>
-                <h2>Você vai levar <em>3 bônus</em> incríveis</h2>
-                <p>Materiais extras que vão acelerar ainda mais seus resultados</p>
-            </div>
-
-            <div class="bonus-grid">
-                <div class="bonus-card fade-in">
-                    <div class="icon">📋</div>
-                    <h3>Ferramenta de Acompanhamento</h3>
-                    <p>Organize suas finanças com uma ferramenta prática baseada nos princípios bíblicos de mordomia.</p>
-                    <span class="bonus-tag">🎁 Bônus 1</span>
-                </div>
-
-                <div class="bonus-card fade-in">
-                    <div class="icon">📿</div>
-                    <h3>Orações da Prosperidade</h3>
-                    <p>10 orações poderosas baseadas nas Escrituras para declarar prosperidade sobre sua vida e família.</p>
-                    <span class="bonus-tag">🎁 Bônus 2</span>
-                </div>
-
-                <div class="bonus-card fade-in">
-                    <div class="icon">🎧</div>
-                    <h3>Meditação Guiada</h3>
-                    <p>Uma meditação poderosa com princípios bíblicos para reprogramar sua mente para a prosperidade.</p>
-                    <span class="bonus-tag">🎁 Bônus 3</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1374,22 +1292,22 @@
             <div class="section-head">
                 <div class="tag" style="background: rgba(201, 154, 59, 0.15); color: var(--gold-light); border-color: rgba(201, 154, 59, 0.2);">Oferta Especial</div>
                 <h2>Comece sua jornada de <em>prosperidade</em> agora</h2>
-                <p>Acesso imediato ao Guia + 3 bônus + áudio — tudo por um preço acessível</p>
+                <p>Acesso imediato aos 7 livros + bônus — tudo por um preço acessível</p>
             </div>
 
             <div class="pricing-box">
                 <div class="price-row">
-                    <span class="price-old">R$ 97,00</span>
+                    <span class="price-old">R$ 679,00</span>
                     <span class="price-new"><sup>R$</sup>19,90</span>
-                    <span class="price-tag">-79%</span>
+                    <span class="price-tag">-97%</span>
                 </div>
                 <p class="price-info">
-                    <strong>Economize R$ 77,10</strong> · Oferta por tempo limitado
+                    <strong>Economize R$ 659,10</strong> · Oferta por tempo limitado
                 </p>
 
                 <a href="#" class="btn-primary" id="ctaPreco">
                     <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    Quero meu Guia agora
+                    Quero meu combo agora
                 </a>
 
                 <div class="guarantee">
@@ -1406,17 +1324,17 @@
             <div class="section-head">
                 <div class="tag">Perguntas Frequentes</div>
                 <h2>Ainda com <em>dúvidas?</em></h2>
-                <p>Respondemos as perguntas mais comuns sobre o Guia</p>
+                <p>Respondemos as perguntas mais comuns sobre o combo</p>
             </div>
 
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span>Como vou receber o material?</span>
+                        <span>Como vou receber os livros?</span>
                         <span class="plus">+</span>
                     </div>
                     <div class="faq-a">
-                        <p>Imediatamente após a confirmação do pagamento, você receberá um link para baixar o PDF, os bônus e a meditação. Tudo disponível em até 5 minutos.</p>
+                        <p>Imediatamente após a confirmação do pagamento, você receberá um link para baixar todos os 7 livros em PDF. Tudo disponível em até 5 minutos.</p>
                     </div>
                 </div>
 
@@ -1426,7 +1344,7 @@
                         <span class="plus">+</span>
                     </div>
                     <div class="faq-a">
-                        <p>Não! O guia foi escrito com linguagem simples e acessível. Você não precisa ser especialista em teologia para aplicar os princípios.</p>
+                        <p>Não! Os livros foram escritos com linguagem simples e acessível. Você não precisa ser especialista em teologia para aplicar os princípios.</p>
                     </div>
                 </div>
 
@@ -1436,7 +1354,7 @@
                         <span class="plus">+</span>
                     </div>
                     <div class="faq-a">
-                        <p>Sim! O PDF é otimizado para leitura em qualquer dispositivo — celular, tablet, computador ou até impresso.</p>
+                        <p>Sim! Todos os PDFs são otimizados para leitura em qualquer dispositivo — celular, tablet, computador ou até impresso.</p>
                     </div>
                 </div>
 
@@ -1452,11 +1370,11 @@
 
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span>O áudio é uma narração do guia completo?</span>
+                        <span>São realmente 7 livros completos?</span>
                         <span class="plus">+</span>
                     </div>
                     <div class="faq-a">
-                        <p>Sim! Você recebe o áudio completo narrado para ouvir onde quiser — no carro, na academia ou antes de dormir.</p>
+                        <p>Sim! Você recebe 7 livros completos em PDF, com centenas de páginas sobre prosperidade, finanças e princípios bíblicos.</p>
                     </div>
                 </div>
             </div>
@@ -1470,10 +1388,10 @@
                 Pare de viver na <em>escassez</em>.<br>
                 Descubra a <em>prosperidade</em> que Deus tem para você.
             </h2>
-            <p>Comece agora mesmo. Acesso imediato ao Guia + 3 bônus + áudio.</p>
+            <p>Comece agora mesmo. Acesso imediato aos 7 livros + bônus.</p>
             <a href="#" class="btn-primary" id="ctaFinal">
                 <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                Garantir meu Guia — R$ 19,90
+                Garantir meu combo — R$ 19,90
             </a>
         </div>
     </section>
@@ -1493,8 +1411,8 @@
     <a href="#" class="floating-cta" id="floatingCta">
         <span class="price">R$19,90</span>
         <span class="text">
-            Garantir Guia
-            <small>Acesso imediato</small>
+            Garantir combo
+            <small>7 livros</small>
         </span>
         <span class="arrow">→</span>
     </a>
@@ -1532,13 +1450,11 @@
                 question.addEventListener('click', function() {
                     const isOpen = item.classList.contains('open');
 
-                    // Fecha todos
                     document.querySelectorAll('.faq-item').forEach(function(i) {
                         i.classList.remove('open');
                         i.querySelector('.faq-a').style.maxHeight = null;
                     });
 
-                    // Abre o atual se estava fechado
                     if (!isOpen) {
                         item.classList.add('open');
                         answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -1547,32 +1463,24 @@
             });
 
             // ========== LINKS DE COMPRA ==========
-            // >>> SUBSTITUA O LINK ABAIXO PELO SEU <<<
             const checkoutUrl = 'https://pay.kiwify.com.br/FlEb205';
 
             const links = document.querySelectorAll('#ctaPrincipal, #ctaPreco, #ctaFinal, #floatingCta, .nav-cta');
 
             links.forEach(function(link) {
                 link.addEventListener('click', function(e) {
-                    if (checkoutUrl === '#') {
-                        e.preventDefault();
-                        alert('⚠️ Configure seu link de compra no código!\n\n' +
-                            'Procure por "checkoutUrl" no JavaScript e substitua pelo seu link.');
-                    } else {
-                        window.location.href = checkoutUrl;
-                        e.preventDefault();
-                        
-                        console.log('🛒 Clique em comprar registrado!', {
-                            produto: 'O Segredo da Prosperidade segundo a Bíblia',
-                            preco: 'R$ 19,90',
-                            timestamp: new Date().toISOString()
-                        });
-                    }
+                    window.location.href = checkoutUrl;
+                    e.preventDefault();
+
+                    console.log('🛒 Clique em comprar registrado!', {
+                        produto: 'O Segredo da Prosperidade segundo a Bíblia',
+                        preco: 'R$ 19,90',
+                        timestamp: new Date().toISOString()
+                    });
                 });
             });
 
             console.log('📖 Página carregada com sucesso!');
-            console.log('💡 Configure seu link de compra no JavaScript (checkoutUrl).');
             console.log('🖼️ Substitua os placeholders de imagem pelas suas capas e prints.');
 
         })();
