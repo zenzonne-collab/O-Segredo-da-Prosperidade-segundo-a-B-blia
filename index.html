@@ -266,17 +266,14 @@
         }
 
         /* ========== IMAGEM - VOCÊ VAI SUBSTITUIR ========== */
-        .product-card .book-cover {
-            width: 100%;
-            max-width: 280px;
-            margin: 0 auto 20px;
-            border-radius: 8px;
-            box-shadow: 0 12px 40px rgba(26, 20, 16, 0.2);
-            aspect-ratio: 3/4;
-            object-fit: cover;
-            background: var(--cream-dark);
-          <img src="capa.jpg" alt="Capa do Guia" style="width:100%;height:100%;object-fit:cover;">
-        }
+       <!-- Imagem com texto centralizado -->
+<div style="position:relative; max-width:280px; margin:0 auto 20px; border-radius:8px; overflow:hidden; box-shadow:0 12px 40px rgba(26,20,16,0.2); aspect-ratio:3/4;">
+    <img src="sua-imagem.png" alt="Capa do Guia" style="width:100%;height:100%;object-fit:cover;">
+    <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:20px; background:rgba(0,0,0,0.3); color:#fff; text-align:center;">
+        <h3 style="font-family:'Playfair Display',serif; font-size:22px; font-weight:700; margin:0; line-height:1.2; text-shadow:0 2px 8px rgba(0,0,0,0.5);">O Segredo da Prosperidade<br>segundo a Bíblia</h3>
+        <p style="font-family:'Inter',sans-serif; font-size:13px; opacity:0.9; margin-top:6px; text-shadow:0 2px 4px rgba(0,0,0,0.5);">Guia prático com princípios divinos</p>
+    </div>
+</div>
 
         /* PLACEHOLDER PARA VOCÊ SUBSTITUIR PELA SUA IMAGEM */
         .product-card .cover-placeholder {
